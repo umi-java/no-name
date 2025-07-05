@@ -1,5 +1,5 @@
-import React from 'react';
-import styles from './Label.module.css';
+import React from "react";
+import styles from "./Label.module.css";
 
 // ラベルコンポーネントのProps型定義
 type LabelProps = {
@@ -30,10 +30,10 @@ export const Label: React.FC<LabelProps> = ({
   className,
   style,
 }) => {
-  const labelClass = `${styles.label} ${className || ''}`.trim();
+  const labelClass = `${styles.label} ${className || ""}`.trim();
 
   return (
-    <label htmlFor={htmlFor} className={labelClass} style={style}>
+    <label role="label" htmlFor={htmlFor} className={labelClass} style={style}>
       {children}
     </label>
   );
